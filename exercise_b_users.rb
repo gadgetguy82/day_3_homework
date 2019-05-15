@@ -96,7 +96,9 @@ users["Christoper"] = {
   home_town: "Aberdeen",
   pets: [
     {
-      
+      name: "Stampy",
+      species: "elephant"
     }
   ]
 }
+p users
