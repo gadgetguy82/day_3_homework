@@ -64,7 +64,12 @@ p users["Erik"][:home_town]
 p users["Erik"][:lottery_numbers]
 
 # 4. Get the type of Avril's pet Monty
-p users["Avril"][:pets][0][:species]
+
+#p users["Avril"][:pets][0][:species]
+
+# Search below is used in the case where we don't know where the pet Monty is in the array. Otherwise use the solution above which is commented out
+type = users["Avril"][:pets].select{|pet| pet[:name] == "monty"}[0][:species]
+p type
 
 # 5. Get the smallest of Erik's lottery numbers
 p users["Erik"][:lottery_numbers].min
@@ -96,7 +101,7 @@ users["Christoper"] = {
   home_town: "Aberdeen",
   pets: [
     {
-      name: "Stampy",
+      name: "stampy",
       species: "elephant"
     }
   ]
